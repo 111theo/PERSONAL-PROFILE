@@ -1,65 +1,103 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-    <meta charset ="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Profile </title>    
-    <!--Bootstrap CSS-->        
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">        
-  
-    <link rel="stylesheet" href="styles.css">  
 
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">My Personal Profile</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class collapse navbar-collapse id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>      
-                            </li>
-                            
-                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="skills.html">Skills</a>
-                            </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="education.html">Education</a>
-        
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                          </li>
-                      </li>
-                   </ul>
-              </div>
-           </div>
-            
-        </nav>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        </header>
-         <main class="container my-5">
-    <div class="row">
-        <div class="col-md-8">
-            <h1>Welcome to Theo Mookodi's Personal Profile</h1>
-            <p>Good day, my names Theo Mookodi, i am a passionate software developer with a love for creating innovative solutions. This portfolio showcases my skills and experiences in the world of technology. Feel free to explore and learn more about me!</p>
-            <img src="https:data:image/png;base64,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"/>
-              </main>
+<title>My Personal Profile</title>
 
-        <footer>
-            <p>@Theo mookodi</p></p>
-        </footer>
-        <!-- Bootstrap JS and dependencies -->
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+
+<a class="navbar-brand" href="index.html">My Personal Profile</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="skills.html">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="education.html">Education</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container my-5">
+
+<div class="row">
+
+<div class="col-md-8">
+
+<h1>Welcome to Theo Mookodi's Personal Profile</h1>
+
+<p>
+Good day, my name is Theo Mookodi. I am a passionate software developer with a love for creating innovative solutions. 
+This portfolio showcases my skills and experiences in the world of technology. 
+Feel free to explore and learn more about me!
+</p>
+
+<!-- IMAGE -->
+<img 
+src="https://images.ctfassets.net/2pyx8rwuvz6x/6ripdMG3FUQnJCEuMOk5MK/1623aa4f205c8cffe8d11916bdb26287/PressAssets_Brand.png" 
+class="img-fluid mt-3"
+width="300"
+alt="Pinterest Logo">
+
+</div>
+
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+
+<p>© Theo Mookodi</p>
+
+</footer>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-        
-    </body>
+</body>
+
 </html>
